@@ -1,0 +1,43 @@
+body {
+    background-image: url("../images/Space5.jpg");
+    background-repeat: no-repeat;
+    background-size: 2000px;
+}
+.jumbotron {
+    background: transparent;
+}
+
+.display-4 {
+    font-family: 'Ultra', serif;
+    text-shadow: 'white';
+    font-size: 80px;
+}
+.lead {
+    font-family: 'Teko', sans-serif;
+    font-size: 45px;
+}
+
+.wrapper{
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.panel-footer{
+    position: static;
+    color: white;
+    background: transparent;
+    border-top: solid black;    
+    text-align: center;
+    font-size: large;
+    line-height: 100px;
+    bottom: 0;
+  }
