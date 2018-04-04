@@ -1,30 +1,31 @@
 body {
-    background-image: url("../images/Space5.jpg");
+    background-image: url("../images/Space4.jpg");
     background-repeat: no-repeat;
-    background-size: 2000px;
+    background-size: 2500px;
 }
 .jumbotron {
     background: transparent;
+    border-style: solid;
+}
+.jumbotron h1{
+    color: white;
 }
 
 .display-4 {
     font-family: 'Ultra', serif;
-    text-shadow: 'white';
+    text-shadow: 'red';
+    font-style: normal;
     font-size: 80px;
+    border: thick;
 }
-.lead {
-    font-family: 'Teko', sans-serif;
-    font-size: 45px;
-}
-
 .wrapper{
     font-size: 20px;
     color: white;
 }
-
-
-
-
+.btn {
+    background: url("../images/Space33.jpg");
+    border: thick;
+}
 
 
 
@@ -39,5 +40,4 @@ body {
     text-align: center;
     font-size: large;
     line-height: 100px;
-    bottom: 0;
   }
