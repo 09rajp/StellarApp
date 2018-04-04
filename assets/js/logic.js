@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $(document).on("click", "#searchBtn", function (event) {
         event.preventDefault();
-        target.empty()
+        target.empty();
 
         var searchText = $("#Search").val();
         var newsAPI = "apiKey=591d63bc6d944775907209479376dfa4";
