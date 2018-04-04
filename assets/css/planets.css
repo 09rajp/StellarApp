@@ -33,7 +33,7 @@ body {
 
 /* FOOTER */
 .panel-footer{
-    position: static;
+    position: static    ;
     color: white;
     background: transparent;
     border-top: solid black;    
