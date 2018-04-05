@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // var ipUrl = "https://ipapi.co/json";
 
     var target = $(".target");
 
@@ -44,13 +43,21 @@ $(document).ready(function () {
 
                 target.append(article);
 
-                // target.append(article);
-
-
             }
         })
 
 
     });
+    $(document).on("click", "#imgSearch", function(event){
+        event.preventDefault();
+        var beginDate = $("#beginDate").val();
+        var endDate = $("#end-date").val();
+        var count = $("#count").val();
+
+        console.log(beginDate);
+        console.log(endDate);
+        console.log(count);
+
+    })
 });
 
