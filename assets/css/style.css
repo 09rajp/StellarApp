@@ -10,14 +10,15 @@
 }
 
 .card {
-    background: red;
+    background: #000000;
+    color: #ffffff;
 }
 
 .card-header {
     background: darkred;
 }
 
-.btn {
+. {
     background: black;
     color: white;
 }
@@ -27,9 +28,6 @@
     width: 350px;
 }
 
-.jumbotron {
-    text-align: center;
-    background: #888;
-}.consGifCard{
+.consGifCard{
     text-align: center;
 }
