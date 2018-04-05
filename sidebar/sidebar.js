@@ -130,12 +130,17 @@ var quiz = [
 ];
 
 
-    $("#Submit").on("click", function(event) {
-        for ( var i = 0; i < quiz.length; i++) {
-            var pTag = $("<p>");
-            var factsPlacement = $("#facts");
-            pTag.append(quiz[i]);
-            $("#facts").append(pTag);
-        }
+$("#Submit").on("click", function() {
 
+    $.each(quiz, function(i,e) {
+        setTimeout(function() {
+            var pTag = $("<p>", {text: e});
+                time = (i*300)+(quiz.length*300);
+            $('body').append(pTag)
+            setTimeout(function() {
+                pTag.css('color', 'black').prev('span').css('color', 'white');
+            },time );
+        }, i*300);
     });
+
+});
