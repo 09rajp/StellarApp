@@ -29,6 +29,10 @@ body {
     font-size: 20px;
     color: white;
 }
+.btn {
+    background: url("../images/Space33.jpg");
+    border: thick;
+}
 
 
 
