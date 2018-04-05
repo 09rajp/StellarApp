@@ -1,19 +1,18 @@
 $(document).ready(function () {
-    // var ipUrl = "https://ipapi.co/json";
 
-    var target = $("#target");
+    var target = $(".target");
 
     $(document).on("click", "#searchBtn", function (event) {
         event.preventDefault();
         target.empty();
 
-        var searchText = $("#Search").val();
+        var searchText = $("#usr").val();
         var newsAPI = "apiKey=591d63bc6d944775907209479376dfa4";
         var newsUrl = "https://newsapi.org/v2/everything?" + newsAPI + "&q=" + searchText + "&language=en";
         console.log("search text: " + searchText);
         console.log("API key: " + newsAPI);
         console.log("Query Url: " + newsUrl);
-        $("#Search").val("");
+        $("#usr").val("");
         $.ajax({
 
             url: newsUrl,
@@ -44,13 +43,21 @@ $(document).ready(function () {
 
                 target.append(article);
 
-                // target.append(article);
-
-
             }
         })
 
 
     });
+    $(document).on("click", "#imgSearch", function(event){
+        event.preventDefault();
+        var beginDate = $("#beginDate").val();
+        var endDate = $("#end-date").val();
+        var count = $("#count").val();
+
+        console.log(beginDate);
+        console.log(endDate);
+        console.log(count);
+
+    })
 });
 

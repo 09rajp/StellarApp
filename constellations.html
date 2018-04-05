@@ -16,18 +16,62 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/planets.css">
 
-    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <title>Constellation</title>
 </head>
+
+
 <body>
-<div class="container">
-    <div class="jumbotron">
-        <h1>Constellations</h1>
+<div class="body">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <div class="container text-center">
+        <br>
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">CONSTELLATIONS</h1>
+        </div>
     </div>
+</div>
+<br>
+<br>
+<div class="container text-center">
+    <div class="wrapper">
+        <!-- BUTTONS -->
+        <a href="index.html"> <button type="button" class="btn btn-primary btn-lg">Home</button></a>
+        <a href="facts.html"><button type="button" class="btn btn-primary btn-lg">Facts</button></a>
+        <a href="planets.html"><button type="button" class="btn btn-primary btn-lg">Planets</button></a>
+        <a href="constellations.html"><button type="button" class="btn btn-primary btn-lg">Constellations</button></a>
+        <a href="predictions.html"><button type="button" class="btn btn-primary btn-lg">Predictions</button></a>
+        <br>
+        <br>
+        <!-- INPUT BAR -->
+        <div class="form-group">
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+            <input type="text" class="form-control" id="usr">
+        </div>
+
+
+        <section id="main-content">
+
+
+        </section>
+        <br>
+    </div>
+</div>
+<div class="container col-lg-8">
     <div class="row">
         <div class="card consGifCard col-lg-12" style="width: 18rem;">
             <img class="card-img-top image-responsive consGif" src="assets/images/stellarGif.gif"
@@ -52,7 +96,8 @@
                    class="btn btn-primary">More History</a>
                 <a href="http://www.modernconstellations.com/celestialmaps.html" target="_blank"
                    class="btn btn-primary">Constellation Maps</a>
-                <a href="http://www.modernconstellations.com/constables.html" target="_blank" class="btn btn-primary">Constellation
+                <a href="http://www.modernconstellations.com/constables.html" target="_blank"
+                   class="btn btn-primary button">Constellation
                     Tables</a>
             </div>
         </div>
@@ -66,7 +111,7 @@
                 <p class="card-text">The little bear. A constellation of the Northern Sky can be seen as small
                     ladle. Most well known for containing Polaris, The North Star, which is located at the end of
                     the tail.</p>
-                <a href="https://en.wikipedia.org/wiki/Ursa_Minor" target="_blank" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Ursa_Minor" target="_blank" class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -78,7 +123,8 @@
                 <p class="card-text">A constellation of the Zodiac. It's name is Latin for virgin. It's position in
                     the sky lies between Leo to the West and Libra to the East. It is the second largest constellation
                     in the sky. </p>
-                <a href="https://en.wikipedia.org/wiki/Virgo_(constellation)" target="_blank" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Virgo_(constellation)" target="_blank"
+                   class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -90,7 +136,8 @@
                 <p class="card-text">Located in the Northern Sky. It was named after the Greek hero
                     Perseus, of mythological origin. It is located near several other constellations named after
                     Greek legends.</p>
-                <a href="https://en.wikipedia.org/wiki/Perseus_(constellation)" target="_blank" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Perseus_(constellation)" target="_blank"
+                   class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -105,7 +152,7 @@
                     mythological hero, Herakles. It is the largest of the modern constellations. It is located in
                     the Northern Sky.</p>
                 <a href="https://en.wikipedia.org/wiki/Hercules_(constellation)" target="_blank"
-                   class="btn btn-primary">More Information</a>
+                   class="btn btn-primary button">More Information</a>
             </div>
         </div>
         <div class="card col-lg-4" style="width: 18rem;">
@@ -117,7 +164,7 @@
                     Greek mythology, who always boasted about her beauty. It is visible all year round opposite The
                     Big Dipper.</p>
                 <a href="https://en.wikipedia.org/wiki/Cassiopeia_(constellation)" target="_blank"
-                   class="btn btn-primary">More Information</a>
+                   class="btn btn-primary button">More Information</a>
             </div>
         </div>
         <div class="card col-lg-4" style="width: 18rem;">
@@ -129,7 +176,7 @@
                     was from a Greek myth where Andromeda was chained to the rock to be eaten by the sea monster
                     Cetus.</p>
                 <a href="https://en.wikipedia.org/wiki/Andromeda_(constellation)" target="_blank"
-                   class="btn btn-primary">More
+                   class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -143,7 +190,7 @@
                 <p class="card-text">Visible from everywhere in the world and located on the celestial equator. It
                     was named after the hunter, Orion, in Greek Mythology. The earliest depiction of Orion is thought
                     to be fashioned in a cave 32,000-38,000 years ago.</p>
-                <a href="https://en.wikipedia.org/wiki/Orion_(constellation)" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Orion_(constellation)" class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -155,7 +202,7 @@
                 <p class="card-text">Latin for cup carrier or bearer. Represented the youth Ganymede in Greek
                     mythology. He was an extremely handsome man that was recognized by Zeus and invited to be the
                     cupbearer of the gods.</p>
-                <a href="https://en.wikipedia.org/wiki/Aquarius_(constellation)" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Aquarius_(constellation)" class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
@@ -166,43 +213,37 @@
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
-                <a href="https://en.wikipedia.org/wiki/Aquila_(constellation)" class="btn btn-primary">More
+                <a href="https://en.wikipedia.org/wiki/Aquila_(constellation)" class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
     </div>
 </div>
 
-<!--<div class="row">-->
-<!--<div class="card col-lg-4" style="width: 18rem;">-->
-<!--<img class="card-img-top" src="..." alt="Card image cap">-->
-<!--<div class="card-body">-->
-<!--<h5 class="card-title">Card title</h5>-->
-<!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-<!--card's content.</p>-->
-<!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="card col-lg-4" style="width: 18rem;">-->
-<!--<img class="card-img-top" src="..." alt="Card image cap">-->
-<!--<div class="card-body">-->
-<!--<h5 class="card-title">Card title</h5>-->
-<!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-<!--card's content.</p>-->
-<!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="card col-lg-4" style="width: 18rem;">-->
-<!--<img class="card-img-top" src="..." alt="Card image cap">-->
-<!--<div class="card-body">-->
-<!--<h5 class="card-title">Card title</h5>-->
-<!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
-<!--card's content.</p>-->
-<!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+<div class="target"></div>
+
+
+<br>
+<br>
+<br>
+
+<!-- FOOTER -->
+<div class="panel-footer">
+    <div class="container">
+        <div class="container text-center">
+            <footer>©Copyright 2018 STELLAR INC</footer>
+        </div>
+    </div>
 </div>
+
+
+<!--JAVASCRIPT & JQUERY SCRIPTS -->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+<!--crossorigin="anonymous"></script>-->
+<script src="assets/javascript/main.js"></script>
 <script src="assets/js/logic.js"></script>
+
+
+</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 body {
-    background-image: url("../images/Space4.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../images/Space44.jpg");
+    /* background-repeat: no-repeat; */
+    min-height: 100%;
     background-size: 2500px;
 }
 .jumbotron {
@@ -13,7 +14,7 @@ body {
 
 .display-4 {
     font-family: 'Ultra', serif;
-    text-shadow: 'red';
+    text-shadow: red;
     font-style: normal;
     font-size: 80px;
     border: thick;
