@@ -48,26 +48,39 @@
 <div class="container text-center">
     <div class="wrapper">
         <!-- BUTTONS -->
-        <a href="index.html"> <button type="button" class="btn btn-primary btn-lg">Home</button></a>
-        <a href="facts.html"><button type="button" class="btn btn-primary btn-lg">Facts</button></a>
-        <a href="planets.html"><button type="button" class="btn btn-primary btn-lg">Planets</button></a>
-        <a href="constellations.html"><button type="button" class="btn btn-primary btn-lg">Constellations</button></a>
-        <a href="predictions.html"><button type="button" class="btn btn-primary btn-lg">Predictions</button></a>
+        <a href="index.html">
+            <button type="button" class="btn btn-primary btn-lg">Home</button>
+        </a>
+        <a href="facts.html">
+            <button type="button" class="btn btn-primary btn-lg">Facts</button>
+        </a>
+        <a href="planets.html">
+            <button type="button" class="btn btn-primary btn-lg">Planets</button>
+        </a>
+        <a href="constellations.html">
+            <button type="button" class="btn btn-primary btn-lg">Constellations</button>
+        </a>
+        <a href="APOD.html">
+            <button type="button" class="btn btn-primary btn-lg">APOD</button>
+        </a>
         <br>
         <br>
         <!-- INPUT BAR -->
-        <div class="form-group">
-            <button type="button" class="btn btn-default">
-                <span class="glyphicon glyphicon-search"></span> Search
-            </button>
-            <input type="text" class="form-control" id="usr">
+
+        <form>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" id="searchBtn">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+                <input type="text" class="form-control" id="userInput" placeholder="Article Search....">
+            </div>
+        </form>
+
+
+        <div id="weather-Data">
+
+
         </div>
-
-
-        <section id="main-content">
-
-
-        </section>
         <br>
     </div>
 </div>
@@ -210,17 +223,21 @@
             <img class="card-img-top image-responsive constellation" src="assets/images/aqulia.jpg"
                  alt="Aquila Constellation">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <h5 class="card-title">Aquila</h5>
+                <p class="card-text">Latin for Eagle. .</p>
                 <a href="https://en.wikipedia.org/wiki/Aquila_(constellation)" class="btn btn-primary button">More
                     Information</a>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="container col-lg-12 target">
+            <h1 style="color: white; align-content: center;">Returned Articles</h1>
+        </div>
+    </div>
+
 </div>
 
-<div class="target"></div>
 
 
 <br>
@@ -240,7 +257,7 @@
 <!--JAVASCRIPT & JQUERY SCRIPTS -->
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
 <!--crossorigin="anonymous"></script>-->
-<script src="assets/javascript/main.js"></script>
+<!--<script src="assets/javascript/main.js"></script>-->
 <script src="assets/js/logic.js"></script>
 
 
