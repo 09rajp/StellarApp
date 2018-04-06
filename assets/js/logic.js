@@ -55,15 +55,25 @@ $(document).ready(function () {
             var beginDate = $("#begin-date").val();
             var endDate = $("#end-date").val();
             var count = $("#count").val();
-
-            var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc"
+            if ($('#check_id').is(":checked")){
+                console.log("checked");
+            }
+            var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc";
 
                 $.ajax({
                     url: apodUrl,
-                    // dataType: "jsonp",
                     method: "GET"
                 }).then(function(response) {
+                    var apod = $("<div class='well'>");
+                    var img = $("<img class='image-responsive'>");
+
+
+                    img = img.attr("src", response.url)
+
+
+
                     console.log(response);
+
 
 
                     console.log(beginDate);
