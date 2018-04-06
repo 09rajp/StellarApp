@@ -4,7 +4,7 @@ html{
 }
 .landingPage{
     min-height: 100%;
-    background-image: url("../images/Space1.jpg");
+    background-image: url("../images/Space2.jpg");
 }
 .planets{
     min-height: 100%;
@@ -13,7 +13,6 @@ html{
 .jumbotron {
     background: transparent;
 }
-
 .jumbotron h1{
     font-family: 'Ultra', serif;
     color: white;
