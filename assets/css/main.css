@@ -19,10 +19,12 @@ body {
     font-family: 'Ultra', serif;
     text-shadow: white;
     font-size: 80px;
+    color: white;
 }
 .lead {
     font-family: 'Teko', sans-serif;
     font-size: 45px;
+    color: #c7c7c7;
 }
 
 .wrapper{
