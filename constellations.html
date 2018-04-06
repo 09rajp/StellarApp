@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/planets.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <title>Constellation</title>
+</head>
+
+
+<body>
+<div class="body">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <div class="container text-center">
+        <br>
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">CONSTELLATIONS</h1>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container text-center">
+    <div class="wrapper">
+        <!-- BUTTONS -->
+        <a href="index.html">
+            <button type="button" class="btn btn-primary btn-lg">Home</button>
+        </a>
+        <a href="facts.html">
+            <button type="button" class="btn btn-primary btn-lg">Facts</button>
+        </a>
+        <a href="planets.html">
+            <button type="button" class="btn btn-primary btn-lg">Planets</button>
+        </a>
+        <a href="constellations.html">
+            <button type="button" class="btn btn-primary btn-lg">Constellations</button>
+        </a>
+        <a href="APOD.html">
+            <button type="button" class="btn btn-primary btn-lg">APOD</button>
+        </a>
+        <br>
+        <br>
+
+        <div class="sidebar">
+            <div id="weatherCity">
+            </div>
+            <div id="weatherState">
+            </div>
+            <div id="weatherTemparature">
+            </div>
+            <div id="weatherPrecipation">
+            </div>
+            <div id="weatherWind">
+            </div>
+            <div id="latitude">
+            </div>
+            <div id="longitude">
+            </div>
+            <div id="sunriseTime">
+            </div>
+            <div id="sunsetTime">
+            </div>
+        </div>
+        <!-- INPUT BAR -->
+
+        <form>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" id="searchBtn">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+                <input type="text" class="form-control" id="userInput" placeholder="Article Search....">
+            </div>
+        </form>
+
+
+        <div id="weather-Data">
+
+
+        </div>
+        <br>
+    </div>
+</div>
+<div class="container col-lg-8">
+    <div class="row">
+        <div class="card consGifCard col-lg-12" style="width: 18rem;">
+            <img class="card-img-top image-responsive consGif" src="assets/images/stellarGif.gif"
+                 alt="Constellation Gif">
+            <div class="card-body">
+                <h5 class="card-title">A Constellation is a group of stars that forms a pattern that can be recognized
+                    as an image, usually from mythology or myth.</h5>
+                <h6 class="card-text">There are 88 constellations in modern astronomy. These were expounded upon in
+                    1919 after thousands of years of research by astronomers. There are too many to list here but below
+                    are some of the most well known constellations. Each culture has it's own constellations because the
+                    stars visible around the world differ from place to place. Searching out your culture's own
+                    constellations is a wonderful way to begin your journey into the deep history of the stars</h6>
+                <h6 class="card-text">There are 21 Northern, 15 Southern, and 12 Zodiacal constellations identified
+                    in Ptolemy's Algamest. <i>The Algamest</i>, a book written by an Alexandrian Astronomer, is the
+                    culmination of 30
+                    years of research by Ptolemy circa 150 A.D. He is seemingly the father of modern Astronomy as all of
+                    the constellations gathered and described by him in the book are still in use today. He has inspired
+                    generations
+                    of Astronomers with his research and imagination.</h6>
+
+                <a href="http://www.modernconstellations.com/constellationhistory.html" target="_blank"
+                   class="btn btn-primary">More History</a>
+                <a href="http://www.modernconstellations.com/celestialmaps.html" target="_blank"
+                   class="btn btn-primary">Constellation Maps</a>
+                <a href="http://www.modernconstellations.com/constables.html" target="_blank"
+                   class="btn btn-primary button">Constellation
+                    Tables</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/UrsaMinor.jpg"
+                 alt="Ursa Minor Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Ursa Minor</h5>
+                <p class="card-text">The little bear. A constellation of the Northern Sky can be seen as small
+                    ladle. Most well known for containing Polaris, The North Star, which is located at the end of
+                    the tail.</p>
+                <a href="https://en.wikipedia.org/wiki/Ursa_Minor" target="_blank" class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/Virgo.jpg"
+                 alt="Virgo Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Virgo</h5>
+                <p class="card-text">A constellation of the Zodiac. It's name is Latin for virgin. It's position in
+                    the sky lies between Leo to the West and Libra to the East. It is the second largest constellation
+                    in the sky. </p>
+                <a href="https://en.wikipedia.org/wiki/Virgo_(constellation)" target="_blank"
+                   class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/Perseus.jpg"
+                 alt="Perseus Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Perseus</h5>
+                <p class="card-text">Located in the Northern Sky. It was named after the Greek hero
+                    Perseus, of mythological origin. It is located near several other constellations named after
+                    Greek legends.</p>
+                <a href="https://en.wikipedia.org/wiki/Perseus_(constellation)" target="_blank"
+                   class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/Hercules.jpg"
+                 alt="Hercules Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Hercules</h5>
+                <p class="card-text">Named after the hero of Roman mythology, who was adapted from the Greek
+                    mythological hero, Herakles. It is the largest of the modern constellations. It is located in
+                    the Northern Sky.</p>
+                <a href="https://en.wikipedia.org/wiki/Hercules_(constellation)" target="_blank"
+                   class="btn btn-primary button">More Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/Cassiopeia.gif"
+                 alt="Cassiopeia Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Cassiopeia</h5>
+                <p class="card-text">Located in the Northern Sky, it is named after the vain Queen Cassiopeia from
+                    Greek mythology, who always boasted about her beauty. It is visible all year round opposite The
+                    Big Dipper.</p>
+                <a href="https://en.wikipedia.org/wiki/Cassiopeia_(constellation)" target="_blank"
+                   class="btn btn-primary button">More Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/andromeda.jpg"
+                 alt="Andromeda Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Andromeda</h5>
+                <p class="card-text">Located in the Northern Sky and named after the daughter of Cassiopeia. She
+                    was from a Greek myth where Andromeda was chained to the rock to be eaten by the sea monster
+                    Cetus.</p>
+                <a href="https://en.wikipedia.org/wiki/Andromeda_(constellation)" target="_blank"
+                   class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-4" style="width: 18rem;">
+            <img class="card-img-top image-responsive constellation" src="assets/images/orion.jpg"
+                 alt="Orion Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Orion</h5>
+                <p class="card-text">Visible from everywhere in the world and located on the celestial equator. It
+                    was named after the hunter, Orion, in Greek Mythology. The earliest depiction of Orion is thought
+                    to be fashioned in a cave 32,000-38,000 years ago.</p>
+                <a href="https://en.wikipedia.org/wiki/Orion_(constellation)" class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="...">
+            <img class="card-img-top image-responsive constellation" src="assets/images/aquarius.jpg"
+                 alt="Aquarius Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Aquarius</h5>
+                <p class="card-text">Latin for cup carrier or bearer. Represented the youth Ganymede in Greek
+                    mythology. He was an extremely handsome man that was recognized by Zeus and invited to be the
+                    cupbearer of the gods.</p>
+                <a href="https://en.wikipedia.org/wiki/Aquarius_(constellation)" class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+        <div class="card col-lg-4" style="...">
+            <img class="card-img-top image-responsive constellation" src="assets/images/aqulia.jpg"
+                 alt="Aquila Constellation">
+            <div class="card-body">
+                <h5 class="card-title">Aquila</h5>
+                <p class="card-text">Latin for Eagle. .</p>
+                <a href="https://en.wikipedia.org/wiki/Aquila_(constellation)" class="btn btn-primary button">More
+                    Information</a>
+            </div>
+        </div>
+    </div>
+    <div class="row target">
+            <h1>Returned Articles</h1>
+    </div>
+
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+<!-- FOOTER -->
+<div class="panel-footer">
+    <div class="container">
+        <div class="container text-center">
+            <footer>©Copyright 2018 STELLAR INC</footer>
+        </div>
+    </div>
+</div>
+
+
+<!--JAVASCRIPT & JQUERY SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+<!--crossorigin="anonymous"></script>-->
+<!--<script src="assets/javascript/main.js"></script>-->
+<script src="assets/js/logic.js"></script>
+<script src="./sidebar/sidebar.js"></script>
+
+
+</div>
+</body>
+</html>

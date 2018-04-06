@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+            <!--integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
+            <!--crossorigin="anonymous"></script>-->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" rel="stylesheet">-->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="apod.css">
+
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="assets/css/planets.css">-->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <title>APOD</title>
+</head>
+<body>
+<div class="container">
+    <div class="body">
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <div class="container text-center">
+            <br>
+            <br>
+            <div class="jumbotron">
+                <h1 class="display-4">APOD</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--Input bar-->
+    <div class="row">
+        <form class = "form-inline">
+            <div class="card">
+                <div class="card-header">
+                    <label for="begin-date">Begin Date</label>
+                </div>
+                <div class="card-body">
+                    <div class="form-group inline">
+                        <input type="text" class="form-control" id="begin-date" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <label for="end-date">End Date</label>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="end-date" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <label for="count">Count</label>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="count" placeholder="# of images">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <label class="form-check-label" for="hi-def">HD</label>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="hi-def">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <button type="submit" class="btn btn-primary" id="imgSearch">Submit</button>
+
+    <div class="podTarget"></div>
+
+    <!-- FOOTER -->
+    <div class="panel-footer">
+        <div class="container">
+            <div class="container text-center">
+                <footer>©Copyright 2018 STELLAR INC</footer>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--JAVASCRIPT & JQUERY SCRIPTS -->
+
+<!--<script src="assets/javascript/main.js"></script>-->
+<script src="assets/js/logic.js"></script>f
+
+
+
+</body>
+</html>

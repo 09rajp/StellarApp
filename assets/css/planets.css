@@ -1,0 +1,44 @@
+body {
+    background-image: url("../images/Space44.jpg");
+    /* background-repeat: no-repeat; */
+    min-height: 100%;
+    background-size: 2500px;
+}
+.jumbotron {
+    background: transparent;
+    /* border-style: solid; */
+}
+.jumbotron h1{
+    color: white;
+}
+
+.display-4 {
+    font-family: 'Ultra', serif;
+    text-shadow: red;
+    font-style: normal;
+    font-size: 80px;
+    border: thick;
+}
+.wrapper{
+    font-size: 20px;
+    color: white;
+}
+.btn {
+    background: url("../images/Space33.jpg");
+    border: thick;
+}
+
+
+
+
+
+/* FOOTER */
+.panel-footer{
+    position: static    ;
+    color: white;
+    background: transparent;
+    border-top: solid black;    
+    text-align: center;
+    font-size: large;
+    line-height: 100px;
+  }

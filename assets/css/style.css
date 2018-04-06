@@ -1,0 +1,33 @@
+.image {
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+#articleSearch {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    background: #000000;
+    color: #ffffff;
+}
+
+.target h1 {
+    text-align: center;
+}
+
+.target h1{
+    color: white;
+    text-align: center;
+}
+
+.constellation {
+    height: 250px;
+    width: 350px;
+}
+
+.consGifCard{
+    text-align: center;
+}

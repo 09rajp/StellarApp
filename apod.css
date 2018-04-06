@@ -1,0 +1,18 @@
+.form-control{
+    display: inline;
+    float: left;
+    color: white;
+}
+.form-group label{
+    color: white;
+}
+.form-check label{
+    color: white;
+}
+form{
+    margin: 0 auto;
+}
+#imgSearch{
+    /*text-align: center;*/
+    margin: 0 auto;
+}
