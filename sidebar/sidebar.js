@@ -1,4 +1,5 @@
 // Initialize Firebase
+
 var config = {
     apiKey: "AIzaSyDOhiVrfEuT-sKalrJuS5ybISyO82AxNGU",
     authDomain: "stellardb-46d8e.firebaseapp.com",
@@ -135,12 +136,13 @@ $("#Submit").on("click", function() {
     $.each(quiz, function(i,e) {
         setTimeout(function() {
             var pTag = $("<p>", {text: e});
-                time = (i*300)+(quiz.length*300);
-            $('body').append(pTag)
+                time = (i*3000)+(quiz.length*3000);
+                $("#main-content").empty();
+            $("#main-content").append(pTag)
             setTimeout(function() {
-                pTag.css('color', 'black').prev('span').css('color', 'white');
+                // pTag.css('color', 'lightblue').prev('span').css('color', 'white');
             },time );
-        }, i*300);
+        }, i*3000);
     });
 
 });
