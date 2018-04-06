@@ -53,11 +53,11 @@ $(document).ready(function () {
             console.log("working button");
             event.preventDefault();
             var beginDate = $("#begin-date").val();
+
             var endDate = $("#end-date").val();
             var count = $("#count").val();
-            if ($('#check_id').is(":checked")){
-                console.log("checked");
-            }
+
+
             var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc";
 
                 $.ajax({
@@ -83,7 +83,8 @@ $(document).ready(function () {
                 })
             });
 
-        })
+    var timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1bHLts9pioncEJkvfbVzD6S0q0TaR8TUpFkOGYKYv8Iw/edit#gid=0')
+});
 
 
 
