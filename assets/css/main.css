@@ -1,23 +1,22 @@
 html{
-    min-height: 100%;
+    height: 100%;
     background-image: url("../images/Space5.jpg");
-    background-repeat: no-repeat;
-    /*background-position: center;*/
-    /*background-size: cover;*/
 }
-body {
+.landingPage{
+    min-height: 100%;
+    background-image: url("../images/Space1.jpg");
+}
+.planets{
     min-height: 100%;
     background-image: url("../images/Space5.jpg");
-
-
 }
 .jumbotron {
     background: transparent;
 }
 
-.display-4 {
+.jumbotron h1{
     font-family: 'Ultra', serif;
-    text-shadow: white;
+    color: white;
     font-size: 80px;
 }
 .lead {
@@ -33,6 +32,39 @@ body {
     background: url("../images/Space33.jpg");
     border: thick;
 }
+.image {
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+#articleSearch {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    background: #000000;
+    color: #ffffff;
+}
+
+.card-header {
+    background: darkred;
+}
+
+.target h1{
+    color: white;
+    text-align: center;
+}
+
+.constellation {
+    height: 250px;
+    width: 350px;
+}
+
+.consGifCard{
+    text-align: center;
+}
 
 
 
@@ -44,12 +76,12 @@ body {
 
 /* FOOTER */
 .panel-footer{
-    position: static;
+    /* position: static    ; */
     color: white;
     background: transparent;
     border-top: solid black;    
     text-align: center;
     font-size: large;
-    line-height: 100px;
-    bottom: 0;
+    /* line-height: 100px; */
+    margin-top: 20%;
   }

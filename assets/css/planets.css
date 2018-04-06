@@ -1,3 +1,7 @@
+html {
+height: 100%;
+background-image: url("../images/Moon2.jpg");
+}
 body {
     background-image: url("../images/Space44.jpg");
     /* background-repeat: no-repeat; */
@@ -12,13 +16,6 @@ body {
     color: white;
 }
 
-.display-4 {
-    font-family: 'Ultra', serif;
-    text-shadow: red;
-    font-style: normal;
-    font-size: 80px;
-    border: thick;
-}
 .wrapper{
     font-size: 20px;
     color: white;
@@ -32,13 +29,15 @@ body {
 
 
 
+
 /* FOOTER */
 .panel-footer{
-    position: static    ;
+    /* position: static    ; */
     color: white;
     background: transparent;
     border-top: solid black;    
     text-align: center;
     font-size: large;
-    line-height: 100px;
+    /* line-height: 100px; */
+    margin-top: 20%;
   }
