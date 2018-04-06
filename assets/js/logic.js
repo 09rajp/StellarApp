@@ -14,6 +14,7 @@ $(document).ready(function () {
         console.log("API key: " + newsAPI);
         console.log("Query Url: " + newsUrl);
         $("#userInput").val("");
+        //getting news articles from api
         $.ajax({
 
             url: newsUrl,
@@ -46,21 +47,34 @@ $(document).ready(function () {
 
             }
         })
-
-
-    });
-    console.log("working #2");
-    $(document).on("click", "#imgSearch", function(event){
-        console.log("working button");
-        event.preventDefault();
-        var beginDate = $("#begin-date").val();
-        var endDate = $("#end-date").val();
-        var count = $("#count").val();
-
-        console.log(beginDate);
-        console.log(endDate);
-        console.log(count);
-
     })
-});
+        console.log("working #2");
+        $(document).on("click", "#imgSearch", function (event) {
+            console.log("working button");
+            event.preventDefault();
+            var beginDate = $("#begin-date").val();
+            var endDate = $("#end-date").val();
+            var count = $("#count").val();
 
+            var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc"
+
+                $.ajax({
+                    url: apodUrl,
+                    // dataType: "jsonp",
+                    method: "GET"
+                }).then(function(response) {
+                    console.log(response);
+
+
+                    console.log(beginDate);
+                    console.log(endDate);
+                    console.log(count);
+
+                })
+            });
+
+        })
+
+
+
+   
