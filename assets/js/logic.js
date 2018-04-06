@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("working");
 
     var target = $(".target");
 
@@ -6,13 +7,13 @@ $(document).ready(function () {
         event.preventDefault();
         target.empty();
 
-        var searchText = $("#usr").val();
+        var searchText = $("#userInput").val();
         var newsAPI = "apiKey=591d63bc6d944775907209479376dfa4";
         var newsUrl = "https://newsapi.org/v2/everything?" + newsAPI + "&q=" + searchText + "&language=en";
         console.log("search text: " + searchText);
         console.log("API key: " + newsAPI);
         console.log("Query Url: " + newsUrl);
-        $("#usr").val("");
+        $("#userInput").val("");
         $.ajax({
 
             url: newsUrl,
@@ -48,9 +49,11 @@ $(document).ready(function () {
 
 
     });
+    console.log("working #2");
     $(document).on("click", "#imgSearch", function(event){
+        console.log("working button");
         event.preventDefault();
-        var beginDate = $("#beginDate").val();
+        var beginDate = $("#begin-date").val();
         var endDate = $("#end-date").val();
         var count = $("#count").val();
 

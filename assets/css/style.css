@@ -18,9 +18,9 @@
     background: darkred;
 }
 
-. {
-    background: black;
+.target h1{
     color: white;
+    text-align: center;
 }
 
 .constellation {
