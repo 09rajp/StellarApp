@@ -7,7 +7,9 @@ With implemented geographical guides to planetariums, science centers, and museu
 ## Built with
 
 HTML
+
 CSS
+
 JavaScript
 
 ## Team members:
