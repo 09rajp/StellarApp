@@ -20,6 +20,10 @@ Jay
 
 Raj
 
+### Details
+
+Click [here](https://github.com/Livingnight/StellarApp) for details on our codes and look at out files.
+
 ### License
 
 [Open-weather](https://openweathermap.org/terms) - To retrieve weather data in most pages
@@ -31,7 +35,3 @@ Raj
 [NASA](https://www.nasa.gov/about/highlights/HP_Privacy.html) - APOD picture
 
 [NEWS API](https://newsapi.org/terms) - news articles based on user input
-
-### Details
-
-Click [here](https://github.com/Livingnight/StellarApp) for details on our codes and look at out files.
