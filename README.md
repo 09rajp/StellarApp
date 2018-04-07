@@ -20,13 +20,17 @@ Jay
 
 Raj
 
-### APIs used
+### License
 
 [Open-weather](https://openweathermap.org/terms) - To retrieve weather data in most pages
 
 [IP API](ipapi.co/json/) - To detect a user's location
 
 [Sunrise-Sunset](https://sunrise-sunset.org/terms) - Display Sunrise times on the webpage
+
+[NASA](https://www.nasa.gov/about/highlights/HP_Privacy.html) - APOD picture
+
+[NEWS API](https://newsapi.org/terms) - news articles based on user input
 
 ### Details
 
