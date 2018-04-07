@@ -15,5 +15,11 @@ JavaScript
 ## Team members:
 
 Andrea
+
 Jay
+
 Raj
+
+### APIs used
+
+
