@@ -7,9 +7,9 @@
     <title>The Universe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+          crossorigin="anonymous">
 
 
 
@@ -19,75 +19,74 @@
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
-    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     <script src="assets/javascript/main.js"></script>
-    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-
 </head>
 
 <body>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <div class="container text-center">
-        <br>
-        <br>
-        <div class="jumbotron">
-            <h1 class="display-4">THE UNIVERSE</h1>
-            <p class="lead">The universe is a magical place</p>
-        </div>
-    </div>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<div class="container text-center">
     <br>
     <br>
-    <div class="container text-center">
-        <div class="wrapper">
-
-            <!-- BUTTONS -->
-            <a href="index.html"> <button type="button" class="btn btn-primary btn-lg">Home</button></a>
-            <a href="facts.html"><button type="button" class="btn btn-primary btn-lg">Facts</button></a>
-            <a href="planets.html"><button type="button" class="btn btn-primary btn-lg">Planets</button></a>
-            <a href="constellations.html"><button type="button" class="btn btn-primary btn-lg">Constellations</button></a>
-            <a href="predictions.html"><button type="button" class="btn btn-primary btn-lg">Predictions</button></a>
-            <br>
-            <br>
-            <button id="Submit" class="btn btn-primary btn-lg" type="button">Load Facts</button>
-
-    <div class="sidebar">
-        <div id="weatherCity">
-        </div>
-        <div id="weatherState">
-        </div>
-        <div id="weatherTemparature">
-        </div>
-        <div id="weatherPrecipation">
-        </div>
-        <div id="weatherWind">
-        </div>
-        <div id="latitude">
-        </div>
-        <div id="longitude">
-        </div>
-        <div id="sunriseTime">
-        </div>
-        <div id="sunsetTime">
-        </div>
+    <div class="jumbotron">
+        <h1 class="display-4">THE UNIVERSE</h1>
+        <p class="lead">The universe is a magical place</p>
     </div>
+</div>
+<br>
+<br>
+<div class="container text-center">
+    <div class="wrapper">
+
+        <!-- BUTTONS -->
+        <a href="index.html"> <button type="button" class="btn btn-primary btn-lg">Home</button></a>
+        <a href="facts.html"><button type="button" class="btn btn-primary btn-lg">Facts</button></a>
+        <a href="planets.html"><button type="button" class="btn btn-primary btn-lg">Planets</button></a>
+        <a href="constellations.html"><button type="button" class="btn btn-primary btn-lg">Constellations</button></a>
+        <a href="predictions.html"><button type="button" class="btn btn-primary btn-lg">Predictions</button></a>
+        <br>
+        <br>
+        <button id="Submit" class="btn btn-primary btn-lg" type="button">Load Facts</button>
+        <button id="lightPollution" class="btn btn-primary btn-lg" type="button">Light Pollution</button>
 
 
-    <div id="factsPlacement"></div>
-
-            <section id="main-content">
-                <p>
-                </p>
-            </section>
-            <br>
-            <div id="facts">
-
+        <div class="sidebar container col-lg-4">
+            <div id="weatherCity">
+            </div>
+            <div id="weatherState">
+            </div>
+            <div id="weatherTemparature">
+            </div>
+            <div id="weatherPrecipation">
+            </div>
+            <div id="weatherWind">
+            </div>
+            <div id="latitude">
+            </div>
+            <div id="longitude">
+            </div>
+            <div id="sunriseTime">
+            </div>
+            <div id="sunsetTime">
             </div>
         </div>
+
+
+        <div id="factsPlacement"></div>
+
+        <section id="main-content">
+            <p>
+            </p>
+        </section>
+        <br>
+        <div id="facts">
+
+        </div>
     </div>
+</div>
 
+<div class="text-center lightPollution">To learn more about Light Pollution, click <a href="http://www.darksky.org/light-pollution/">here</a></div>
 
-<div class="timeline-embed" style="width: 100%; height: 600px;">
-
+<div class="content">
 
 
     <!-- SEARCH BAR CONTENT -->
@@ -95,37 +94,26 @@
 
 </div>
 
-    <br>
-    <br>
+<br>
+<br>
 
 
 
-    <!-- FOOTER -->
-    <div class="panel-footer">
-        <div class="container">
-            <div class="container text-center">
-                <footer>©Copyright 2018 STELLAR INC</footer>
-            </div>
+<!-- FOOTER -->
+<div class="panel-footer">
+    <div class="container">
+        <div class="container text-center">
+            <footer>©Copyright 2018 STELLAR INC</footer>
         </div>
     </div>
+</div>
 
-    <!--JAVASCRIPT & JQUERY SCRIPTS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/app.js"></script>
-        <script src="assets/js/logic.js"></script>
-        <script src="./sidebar/sidebar.js"></script>
+<!--JAVASCRIPT & JQUERY SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/app.js"></script>
+<script src="assets/js/logic.js"></script>
+<script src="./sidebar/sidebar.js"></script>
 
-        <script type="text/javascript">
-            // The TL.Timeline constructor takes at least two arguments:
-            // the id of the Timeline container (no '#'), and
-            // the URL to your JSON data file or Google spreadsheet.
-            // the id must refer to an element "above" this code,
-            // and the element must have CSS styling to give it width and height
-            // optionally, a third argument with configuration options can be passed.
-            // See below for more about options.
-            var timeline = new TL.Timeline('timeline-embed',
-                'https://docs.google.com/spreadsheets/d/1bHLts9pioncEJkvfbVzD6S0q0TaR8TUpFkOGYKYv8Iw/edit#gid=0');
-        </script>
 </body>
 
 </html>
