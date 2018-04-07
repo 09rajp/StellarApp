@@ -27,3 +27,7 @@ Raj
 [IP API](ipapi.co/json/) - To detect a user's location
 
 [Sunrise-Sunset](https://sunrise-sunset.org/terms) - Display Sunrise times on the webpage
+
+### Details
+
+Click [here](https://github.com/Livingnight/StellarApp) for details on our codes and look at out files.
