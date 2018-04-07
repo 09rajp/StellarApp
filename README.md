@@ -25,3 +25,5 @@ Raj
 [Open-weather](https://openweathermap.org/terms) - To retrieve weather data in most pages
 
 [IP API](ipapi.co/json/) - To detect a user's location
+
+[Sunrise-Sunset](https://sunrise-sunset.org/terms) - Display Sunrise times on the webpage
