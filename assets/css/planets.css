@@ -37,8 +37,8 @@ body {
     position: static    ;
     color: white;
     background: transparent;
-    border-top: solid black;    
+    border-top: solid black;
     text-align: center;
     font-size: large;
     line-height: 100px;
-  }
+}

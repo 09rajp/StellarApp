@@ -19,10 +19,12 @@ body {
     font-family: 'Ultra', serif;
     text-shadow: white;
     font-size: 80px;
+    color: white;
 }
 .lead {
     font-family: 'Teko', sans-serif;
     font-size: 45px;
+    color: #c7c7c7;
 }
 
 .wrapper{
@@ -34,12 +36,9 @@ body {
     border: thick;
 }
 
-
-
-
-
-
-
+.lightPollution {
+    color: white;
+}
 
 
 /* FOOTER */
@@ -47,9 +46,13 @@ body {
     position: static;
     color: white;
     background: transparent;
-    border-top: solid black;    
+    border-top: solid black;
     text-align: center;
     font-size: large;
     line-height: 100px;
     bottom: 0;
-  }
+}
+
+div.sidebar {
+    border-style: inset;
+}
