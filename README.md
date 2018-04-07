@@ -4,13 +4,13 @@ Stellar is a location based app provides information on current astronomical eve
 
 With implemented geographical guides to planetariums, science centers, and museums; we also use APIs to access user location to provide useful, up-to-date information.
 
-##Built with
+## Built with
 
 HTML
 CSS
 JavaScript
 
-##Team members:
+## Team members:
 
 Andrea
 Jay
