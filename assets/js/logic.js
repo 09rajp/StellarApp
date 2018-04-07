@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log("working");
+    // window.timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1bHLts9pioncEJkvfbVzD6S0q0TaR8TUpFkOGYKYv8Iw/edit#gid=0');
 
     var target = $(".target");
 
@@ -47,10 +48,11 @@ $(document).ready(function () {
 
             }
         })
-    })
+    });
         console.log("working #2");
         $(document).on("click", "#imgSearch", function (event) {
             console.log("working button");
+            $(".podTarget").empty();
             event.preventDefault();
             var beginDate = $("#begin-date").val();
 
@@ -64,11 +66,26 @@ $(document).ready(function () {
                     url: apodUrl,
                     method: "GET"
                 }).then(function(response) {
-                    var apod = $("<div class='well'>");
+                    var target = $(".podTarget");
+                    var apod = $("<div class='card'>");
                     var img = $("<img class='image-responsive'>");
 
+                    if((!$("#hi-def").is(':checked'))){
+                        img = img.attr("src", response.url);
+                    }else{
+                        img = img.attr("src", response.hdurl);
+                    }
+                    if(response.copyright in response){
 
-                    img = img.attr("src", response.url)
+                        apod.prepend("Image Credits: " + response.copyright);
+                    }else{
+                        apod.prepend("Image Credits: " + "Public Domain");
+                    }
+                    apod.prepend()
+                    apod.append(img);
+
+                    target.append(apod);
+
 
 
 
@@ -83,7 +100,6 @@ $(document).ready(function () {
                 })
             });
 
-    var timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1bHLts9pioncEJkvfbVzD6S0q0TaR8TUpFkOGYKYv8Iw/edit#gid=0')
 });
 
 
