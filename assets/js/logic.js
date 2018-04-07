@@ -48,10 +48,10 @@ $(document).ready(function () {
         })
     });
     console.log("working #2");
-    var today = moment().format('YYYY-MM-DD');
-    $("#begin-date").attr("max", today);
-    $("#end-date").attr("max", today);
-    var start = (moment().subtract(parseInt(count) - 1, "days")).format('YYYY-MM-DD');
+    // var today = moment().format('YYYY-MM-DD');
+    // $("#begin-date").attr("max", today);
+    // $("#end-date").attr("max", today);
+    // var start = (moment().subtract(parseInt(count) - 1, "days")).format('YYYY-MM-DD');
 
     var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc";
     $.ajax({
@@ -59,7 +59,7 @@ $(document).ready(function () {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        var target = $(".podTarget");
+        var target = $(".target");
         var apod = $("<div class='card'>");
         var img = $("<img class='img-fluid'>");
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
     $(document).on("click", "#imgSearch", function (event) {
 
         console.log("working button");
-        $(".podTarget").empty();
+        $(".target").empty();
         event.preventDefault();
         // var beginDate = "&start_date=" + $("#begin-date").val();
         //
@@ -93,8 +93,8 @@ $(document).ready(function () {
 
         // start = start.format('YYYY-MM-DD')
         console.log("count: " + count);
-        console.log("today: " + today);
-        console.log("start date: " + start);
+        // console.log("today: " + today);
+        // console.log("start date: " + start);
 
         // console.log("begin date: " + beginDate);
         // console.log(" end date: " + endDate);
@@ -113,7 +113,7 @@ $(document).ready(function () {
                 console.log("response length: " + response.length);
                 for (var i = 0; i < response.length; i++) {
 
-                    var target = $(".podTarget");
+                    var target = $(".target");
                     var img = $("<img class='image-responsive'>");
                     var vid = $("<iframe>");
                     if (response[i].media_type === "image") {
@@ -179,7 +179,7 @@ $(document).ready(function () {
             console.log("response length: " + response.length);
             for (var i = 0; i < response.length; i++) {
 
-                var target = $(".podTarget");
+                var target = $(".target");
                 var img = $("<img class='image-responsive'>");
                 var vid = $("<iframe>");
                 if (response[i].media_type === "image") {
