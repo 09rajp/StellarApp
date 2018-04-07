@@ -22,4 +22,5 @@ Raj
 
 ### APIs used
 
-
+[Open-weather] (https://openweathermap.org/terms) - To retrieve weather data in all pages
+[IP API] (ipapi.co/json/) - To detect user's location
