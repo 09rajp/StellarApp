@@ -1,12 +1,11 @@
 $(document).ready(function () {
     console.log("working");
 
-    var target = $(".target");
+    var target = $(".podTarget");
 
     $(document).on("click", "#searchBtn", function (event) {
         event.preventDefault();
         target.empty();
-
         var searchText = $("#userInput").val();
         var newsAPI = "apiKey=591d63bc6d944775907209479376dfa4";
         var newsUrl = "https://newsapi.org/v2/everything?" + newsAPI + "&q=" + searchText + "&language=en";
@@ -23,10 +22,10 @@ $(document).ready(function () {
             console.log(newsResponse);
             for (var i = 0; i < newsResponse.articles.length; i++) {
                 var articleDiv = $("<div class='card-body article-well'>");
-                var image = $("<img class='image-responsive'>");
+                var image = $("<img class='img-fluid'>");
                 var article = $("<div class='card col-lg-4'>");
 
-                image = image.addClass("image");
+                image = image.addClass("image-responsive");
                 image = image.attr("src",
                     newsResponse.articles[i].urlToImage);
                 image = image.attr("alt", "Go to website to see image");
@@ -47,43 +46,190 @@ $(document).ready(function () {
 
             }
         })
-    })
-        console.log("working #2");
-        $(document).on("click", "#imgSearch", function (event) {
-            console.log("working button");
-            event.preventDefault();
-            var beginDate = $("#begin-date").val();
+    });
+    console.log("working #2");
+    var today = moment().format('YYYY-MM-DD');
+    $("#begin-date").attr("max", today);
+    $("#end-date").attr("max", today);
+    var start = (moment().subtract(parseInt(count) - 1, "days")).format('YYYY-MM-DD');
 
-            var endDate = $("#end-date").val();
-            var count = $("#count").val();
+    var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc";
+    $.ajax({
+        url: apodUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        var target = $(".podTarget");
+        var apod = $("<div class='card'>");
+        var img = $("<img class='img-fluid'>");
 
+        if ((!$("#hi-def").is(':checked'))) {
+            img = img.attr("src", response.url);
+        } else {
+            img = img.attr("src", response.hdurl);
+        }
+        if (response.copyright === undefined) {
 
-            var apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc";
+            apod.prepend("<p>Image Credits: " + "Public Domain</p>");
+        } else {
+            apod.prepend("<p>Image Credits: " + response.copyright + "</p>");
+        }
+        apod.append("<p>Date: " + response.date + "</p>");
+        apod.append("<p>Title: " + response.title + "</p>");
+        apod.append(img);
+        apod.append("<p>" + response.explanation + "</p>");
+        target.append(apod);
+    });
 
-                $.ajax({
-                    url: apodUrl,
-                    method: "GET"
-                }).then(function(response) {
-                    var apod = $("<div class='well'>");
+    $(document).on("click", "#imgSearch", function (event) {
+
+        console.log("working button");
+        $(".podTarget").empty();
+        event.preventDefault();
+        // var beginDate = "&start_date=" + $("#begin-date").val();
+        //
+        // var endDate = "&end_date=" + $("#end-date").val();
+        var count = $("#count").val();
+
+        // start = start.format('YYYY-MM-DD')
+        console.log("count: " + count);
+        console.log("today: " + today);
+        console.log("start date: " + start);
+
+        // console.log("begin date: " + beginDate);
+        // console.log(" end date: " + endDate);
+        console.log("count: " + count);
+
+        if (count === $("#count").val('')) {
+            console.log("registering this");
+            apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc&count=1";
+            $.ajax({
+
+                url: apodUrl,
+                method: "GET"
+            }).then(function (response) {
+                console.log(response);
+                console.log("apdUrl: " + apodUrl);
+                console.log("response length: " + response.length);
+                for (var i = 0; i < response.length; i++) {
+
+                    var target = $(".podTarget");
                     var img = $("<img class='image-responsive'>");
+                    var vid = $("<iframe>");
+                    if (response[i].media_type === "image") {
+                        if ((!$("#hi-def").is(':checked'))) {
+                            var apod = $("<div class='card col-lg-6'>");
+                            console.log("Unchecked: " + response[i].url);
+                            img = img.attr("src", response[i].url);
+                        } else {
+                            var apod = $("<div class='card col-lg-12'>");
+                            console.log("Checked: " + response[i].hdurl);
+                            img = img.attr("src", response[i].hdurl);
+                        }
+                        if (response[i].copyright === undefined) {
+
+                            apod.prepend("<p>Image Credits: " + "Public Domain</p>");
+                        } else {
+                            apod.prepend("<p>Image Credits: " + response[i].copyright + "</p>");
+                        }
+                        apod.append("<p>Date: " + response[i].date + "</p>");
+                        apod.append("<p>Title: " + response[i].title + "</p>");
+                        apod.append(img);
+                        apod.append("<p>" + response[i].explanation + "</p>");
+
+                        target.append(apod);
+                    } else {
+                        console.log("this is the iframe and hopefully it works");
+                        var iframe = $("<div class='video-container'>");
+                        vid = vid.attr("src", response[i].url);
+                        iframe.append(vid);
+
+                        if (response[i].copyright === undefined) {
+
+                            apod.prepend("<p>Video Credits: " + "Public Domain</p>");
+                        } else {
+                            apod.prepend("<p>Video Credits: " + response[i].copyright + "</p>");
+                        }
+                        apod.append("<p>Date: " + response[i].date + "</p>");
+                        apod.append("<p>Title: " + response[i].title + "</p>");
+                        apod.append(iframe);
+                        apod.append("<p>" + response[i].explanation + "</p>");
+
+                        target.append(apod);
+                    }
 
 
-                    img = img.attr("src", response.url)
+                }
+
+            })
+        } else{
+            apodUrl = "https://api.nasa.gov/planetary/apod?api_key=oM7otWCuoVaMMTGg3kQeUpnYI8Az1dY0J18qtpKc&count=" + count;
+
+        // }else if (moment(endDate).subtract(moment(beginDate))) {
+        //
+        }
+
+        $.ajax({
+
+            url: apodUrl,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            console.log("apdUrl: " + apodUrl);
+            console.log("response length: " + response.length);
+            for (var i = 0; i < response.length; i++) {
+
+                var target = $(".podTarget");
+                var img = $("<img class='image-responsive'>");
+                var vid = $("<iframe>");
+                if (response[i].media_type === "image") {
+                    if ((!$("#hi-def").is(':checked'))) {
+                        var apod = $("<div class='card col-lg-6'>");
+                        console.log("Unchecked: " + response[i].url);
+                        img = img.attr("src", response[i].url);
+                    } else {
+                        var apod = $("<div class='card col-lg-12'>");
+                        console.log("Checked: " + response[i].hdurl);
+                        img = img.attr("src", response[i].hdurl);
+                    }
+                    if (response[i].copyright === undefined) {
+
+                        apod.prepend("<p>Image Credits: " + "Public Domain</p>");
+                    } else {
+                        apod.prepend("<p>Image Credits: " + response[i].copyright + "</p>");
+                    }
+                    apod.append("<p>Date: " + response[i].date + "</p>");
+                    apod.append("<p>Title: " + response[i].title + "</p>");
+                    apod.append(img);
+                    apod.append("<p>" + response[i].explanation + "</p>");
+
+                    target.append(apod);
+                } else {
+                    console.log("this is the iframe and hopefully it works");
+                    var iframe = $("<div class='video-container'>");
+                    vid = vid.attr("src", response[i].url);
+                    iframe.append(vid);
+
+                    if (response[i].copyright === undefined) {
+
+                        apod.prepend("<p>Video Credits: " + "Public Domain</p>");
+                    } else {
+                        apod.prepend("<p>Video Credits: " + response[i].copyright + "</p>");
+                    }
+                    apod.append("<p>Date: " + response[i].date + "</p>");
+                    apod.append("<p>Title: " + response[i].title + "</p>");
+                    apod.append(iframe);
+                    apod.append("<p>" + response[i].explanation + "</p>");
+
+                    target.append(apod);
+                }
 
 
+            }
 
-                    console.log(response);
+        })
+    });
 
-
-
-                    console.log(beginDate);
-                    console.log(endDate);
-                    console.log(count);
-
-                })
-            });
-
-    var timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1bHLts9pioncEJkvfbVzD6S0q0TaR8TUpFkOGYKYv8Iw/edit#gid=0')
 });
 
 

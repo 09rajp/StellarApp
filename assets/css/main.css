@@ -11,6 +11,28 @@ body {
 
 
 }
+.text{
+    text-align: center;
+}
+.sidebar{
+    color: white;
+}
+.text p{
+    color: white;
+}
+.form-inline .card{
+    height: 128px;
+    margin-bottom: 10px;
+}
+.form-inline{
+    margin: 0 auto;
+    /*height: 100px;*/
+}
+#imgSearch{
+    display: block;
+    margin: 0 auto 10px auto;
+
+}
 .jumbotron {
     background: transparent;
 }
