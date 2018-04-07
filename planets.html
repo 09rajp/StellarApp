@@ -7,100 +7,201 @@
     <title>Planets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+          crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 
     <!--BOOTSTRAP.JS TAG-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" rel="stylesheet">
 
-
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main1.css" />
     <script src="assets/javascript/main.js"></script>
 </head>
 
 <body>
-    <div class="planets">
-        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-        <div class="container text-center">
-            <br>
-            <br>
-            <div class="jumbotron">
-                <h1 class="display-4">THE PLANETS</h1>
-            </div>
-        </div>
-    
-    <div class= "container">
-    <br>
-    <br>
-
-    
+<div class="planets">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <div class="container text-center">
-        <div class="wrapper">
-
-            <!-- BUTTONS -->
-
-            <a href="index.html">
-                <button type="button" class="btn btn-primary btn-lg">Home</button>
-            </a>
-            <a href="facts.html">
-                <button type="button" class="btn btn-primary btn-lg">Facts</button>
-            </a>
-            <a href="planets.html">
-                <button type="button" class="btn btn-primary btn-lg">Planets</button>
-            </a>
-            <a href="constellations.html">
-                <button type="button" class="btn btn-primary btn-lg">Constellations</button>
-            </a>
-            <a href="APOD.html">
-                <button type="button" class="btn btn-primary btn-lg">APOD</button>
-            </a>
-            <br><br><br>
-
-            <div class="sidebar">
-                <div id="weatherCity">
-                </div>
-                <div id="weatherState">
-                </div>
-                <div id="weatherTemparature">
-                </div>
-                <div id="weatherPrecipation">
-                </div>
-                <div id="weatherWind">
-                </div>
-                <div id="latitude">
-                </div>
-                <div id="longitude">
-                </div>
-                <div id="sunriseTime">
-                </div>
-                <div id="sunsetTime">
-                </div>
-            </div>
-<br><br><br>
-            <!-- INPUT BAR -->
-            <div class="form-group">
-                <button type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span> Search
-                </button>
-                <input type="text" class="form-control" id="usr">
-            </div>
-
-            <!--SPACE FOR MAIN CONTENT -->
-            <section id="main-content">
-
-
-            </section>
-            <br>
+        <br>
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">THE PLANETS</h1>
         </div>
     </div>
-    <br><br><br>
 
-</div>
+    <div class="container">
+        <br>
+        <br>
+
+
+        <div class="container text-center">
+            <div class="wrapper">
+                <!-- BUTTONS -->
+                <a href="index.html">
+                    <button type="button" class="btn btn-primary btn-lg">Home</button>
+                </a>
+                <a href="facts.html">
+                    <button type="button" class="btn btn-primary btn-lg">Facts</button>
+                </a>
+                <a href="planets.html">
+                    <button type="button" class="btn btn-primary btn-lg">Planets</button>
+                </a>
+                <a href="constellations.html">
+                    <button type="button" class="btn btn-primary btn-lg">Constellations</button>
+                </a>
+                <a href="APOD.html">
+                    <button type="button" class="btn btn-primary btn-lg">APOD</button>
+                </a>
+                <br>
+                <br>
+
+                <div class="sidebar">
+                    <div id="weatherCity">
+                    </div>
+                    <div id="weatherState">
+                    </div>
+                    <div id="weatherTemparature">
+                    </div>
+                    <div id="weatherPrecipation">
+                    </div>
+                    <div id="weatherWind">
+                    </div>
+                    <div id="latitude">
+                    </div>
+                    <div id="longitude">
+                    </div>
+                    <div id="sunriseTime">
+                    </div>
+                    <div id="sunsetTime">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <!-- INPUT BAR -->
+                <form>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </button>
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                </form>
+
+                <!--SPACE FOR MAIN CONTENT -->
+                <section id="main-content">
+
+
+                    <div class="row1">
+                        <div class="column" style="background-color: transparent;">
+                            <h2>MERCURY</h2>
+                            <p>Smallest planet in our solar system, is only slightly larger than Earth's moon.</p>
+                            <p>Mercury is covered with craters because it has very little atmosphere to stop impacts</p>.
+                            <p>Very hot during the day, hundreds of degrees below zero at night.</p>
+                            Distance from the sun: About 36 million miles.
+                            <br> Year: About 88 Earth days.
+                            <br> Day: About 59 Earth days.
+                        </div>
+                        <div class="column" style="background-color: transparent;">
+                            <h2>VENUS</h2>
+                            <p>Venus is a dim world of intense heat and volcanic activity.</p>
+                            <p>Similar in structure and size to Earth, its toxic atmosphere traps heat in a 'greenhouse
+                                effect.'</p>.
+                            <p>Venus spins slowly in the opposite direction of most planets.</p>
+                            Distance from the sun: About 67 million miles.
+                            <br> Year: About 225 Earth days.
+                            <br> Day: About 243 Earth days.
+                        </div>
+
+                        <div class="column" style="background-color: transparent;">
+                            <h2>EARTH</h2>
+                            <p>Earth is the third planet from the Sun and the fifth largest in the solar system.</p>
+                            <p>Our home planet is the only planet in our solar system known to harbor living things.</p>.
+                            <p>Earth orbits around the Sun, which is a star</p>
+
+                            All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is an
+                            English/German word, which simply means the ground.
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <div class="column" style="background-color: transparent;">
+                            <h2>MARS</h2>
+                            <p>Fourth planet from the Sun and is the second smallest planet in the solar system.</p>
+                            <p>Often called the “Red Planet” due to its reddish appearance.</p>.
+                            <p>Terrestrial planet with a thin atmosphere composed primarily of carbon dioxide</p>
+                            Distance from the sun: About 141.6 million miles.
+                            <br> Day: Roughly 40 mins longer than an Earth day.
+                        </div>
+                        <div class="column" style="background-color: transparent;">
+                            <h2>JUPITER</h2>
+                            <p>Two and a half times more massive than all the other planets in the solar system combined.</p>
+                            <p>It is made primarily of gases and is therefore known as a “gas giant”.</p>.
+                            <p>Jupiter has the shortest day of all the planets.</p>
+                            <p>The Great Red Spot is a huge storm on Jupiter.</p>
+                            <p>It has raged for at least 350 years. It is so large that three Earths could fit inside it.</p>
+                        </div>
+
+                        <div class="column" style="background-color: transparent;">
+                            <h2>SATURN</h2>
+                            <p>Sixth planet from the Sun and the most distant that can be seen with the naked eye.</p>
+                            <p>Saturn is the second largest planet and it has a gas giant and is composed of similar gasses
+                                including hydrogen, helium and methane.</p>
+                            Distance from the sun: About 36 million miles.
+                            <br> Year: About 29.5 Earth years.
+                            <br> Saturn is the flattest planet due to its low density and fast rotation.
+                            <br>
+                            <p>Saturn is made mostly of hydrogen.</p>
+                            <p>Saturn has 150 moons and smaller moonlets.</p>
+                        </div>
+                    </div>
+
+                    <div class="row3">
+                        <div class="column" style="background-color: transparent;">
+                            <h2>URANUS</h2>
+                            <p>Uranus was officially discovered by Sir William Herschel in 1781.</p>
+                            <p>Uranus turns on its axis once every 17 hours, 14 minutes and it rotates in a retrograde direction,
+                                opposite to the way Earth and most other planets turn.</p>.
+                            <p>Often referred to as an “ice giant” planet, it has a hydrogen upper layer, which has helium
+                                mixed in.</p>
+                        </div>
+                        <div class="column" style="background-color: transparent;">
+                            <h2>NEPTUNE</h2>
+                            <p>Eighth planet from the Sun making it the most distant in the solar system.</p>
+                            <p>Neptune may have formed much closer to the Sun in early solar system history before migrating to its present position.</p>.
+                            <p>Neptune is the smallest of the ice giants.</p>
+                            <p>Large storms whirl through its upper atmosphere, and high-speed winds track around the planet at up 600 meters per second.</p>
+                        </div>
+
+                        <div class="column" style="background-color: transparent;">
+                            <h2>PLUTO</h2>
+                            <p>Discovered in 1930, Pluto is the second closest dwarf planet to the Sun and was at one point classified as the ninth planet.</p>
+                            <p>It is the largest dwarf planet but only the second most massive, </p>
+                            <p>Pluto was reclassified from a planet to a dwarf planet in 2006.</p>
+                            <p>Pluto was discovered on February 18th, 1930 by the Lowell Observatory.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </section>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+    </div>
 
 
     <!-- FOOTER -->
@@ -116,10 +217,11 @@
 
     <!--JAVASCRIPT & JQUERY SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
-    <script src="./sidebar/sidebar.js"></script>
+    <!-- <script src="assets/javascript/app.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/javascript/main.js"></script> -->
+    <script src="sidebar/sidebar.js"></script>
 
-    </div>
+</div>
 </body>
 
 </html>

@@ -11,6 +11,12 @@ body {
 
 
 }
+.text{
+    text-align: center;
+}
+.sidebar{
+    color: white;
+}
 .text p{
     color: white;
 }

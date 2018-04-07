@@ -1,0 +1,120 @@
+html{
+    height: 100%;
+    background-image: url("../images/Space5.jpg");
+}
+.landingPage{
+    min-height: 100%;
+    background-image: url("../images/Space2.jpg");
+}
+.planets{
+    min-height: 100%;
+    background-image: url("../images/Space55.jpg");
+}
+
+
+
+
+
+
+/* PLANETS CSS */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.row1 h2 {
+    font-family: 'Ultra', serif;
+    color: black;
+}
+.row2 h2 {
+    font-family: 'Ultra', serif;
+    color: black;
+}
+.row3 h2 {
+    font-family: 'Ultra', serif;
+    color: black;
+}
+/*PLANETS CSS END*/
+
+
+
+
+
+
+.jumbotron {
+    background: transparent;
+}
+.jumbotron h1{
+    font-family: 'Ultra', serif;
+    color: white;
+    font-size: 80px;
+    color: white;
+}
+.lead {
+    font-family: 'Teko', sans-serif;
+    font-size: 45px;
+    color: #c7c7c7;
+}
+
+.wrapper{
+    font-size: 20px;
+    color: white;
+}
+.btn {
+    background: url("../images/Space33.jpg");
+    border: thick;
+}
+.lightPollution {
+    color: white;
+}
+.image {
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+#articleSearch {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    background: #000000;
+    color: #ffffff;
+}
+
+.card-header {
+    /*background: darkred;*/
+}
+
+.target h1{
+    color: white;
+    text-align: center;
+}
+
+.constellation {
+    height: 250px;
+    width: 350px;
+}
+
+.consGifCard{
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+.panel-footer{
+    /* position: static    ; */
+    color: white;
+    background: transparent;
+    border-top: solid black;
+    text-align: center;
+    font-size: large;
+    /* line-height: 100px; */
+    margin-top: 20%;
+}
+
+div.sidebar {
+    border-style: inset;
+}
