@@ -4,11 +4,13 @@ body {
     min-height: 100%;
     background-size: 2500px;
 }
+
 .jumbotron {
     background: transparent;
     /* border-style: solid; */
 }
-.jumbotron h1{
+
+.jumbotron h1 {
     color: white;
 }
 
@@ -19,22 +21,20 @@ body {
     font-size: 80px;
     border: thick;
 }
-.wrapper{
+
+.wrapper {
     font-size: 20px;
     color: white;
 }
+
 .btn {
     background: url("../images/Space33.jpg");
     border: thick;
 }
 
-
-
-
-
 /* FOOTER */
-.panel-footer{
-    position: static    ;
+.panel-footer {
+    position: static;
     color: white;
     background: transparent;
     border-top: solid black;

@@ -1,9 +1,3 @@
-/*.image {*/
-    /*height: 300px;*/
-    /*width: 300px;*/
-    /*float: left;*/
-/*}*/
-
 #articleSearch {
     margin: 0 auto;
     text-align: center;
@@ -18,7 +12,7 @@
     text-align: center;
 }
 
-.target h1{
+.target h1 {
     color: white;
     text-align: center;
 }
@@ -28,9 +22,10 @@
     width: 350px;
 }
 
-.consGifCard{
+.consGifCard {
     text-align: center;
 }
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -38,9 +33,10 @@
     height: 0;
     overflow: hidden;
 }
+
 .video-container iframe {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
