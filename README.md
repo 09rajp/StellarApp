@@ -14,13 +14,21 @@ CSS
 
 JavaScript
 
+RESTful Web Services
+
+Node.js (Express)
+
+Bootstrap
+
+jQuery
+
 ## Team members:
 
-Andrea
+Andrea Velasquez
 
-Jay
+Jay Jernigan
 
-Raj
+Raj Patel
 
 ### Details
 
